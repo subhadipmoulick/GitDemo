@@ -17,6 +17,7 @@ import java.io.IOException;
 import static io.restassured.RestAssured.given;
 
 public class stepDefinition extends Utils {
+
     static RequestSpecification res;
     static Response response;
     static String place_id;
@@ -24,6 +25,7 @@ public class stepDefinition extends Utils {
     @Given("Add Place Payload with {string} {string} {string}")
     public void add_Place_Payload_with(String name,String language,String address) throws IOException {
         // Write code here that turns the phrase above into concrete actions
+        System.out.println("Git Changes Trial");
 
         res =given().spec(requestSpecification()).body(data.addPlacePayload(name,language,address));
     }
